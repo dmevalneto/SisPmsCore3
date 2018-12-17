@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisPmsCore", "SisPmsCore\SisPmsCore.csproj", "{F4A82510-F8C3-4C47-9240-292FFFADE3DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4A82510-F8C3-4C47-9240-292FFFADE3DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A82510-F8C3-4C47-9240-292FFFADE3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A82510-F8C3-4C47-9240-292FFFADE3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A82510-F8C3-4C47-9240-292FFFADE3DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB06DC1D-54C9-40F3-8E23-EF7572C5C7EF}
+	EndGlobalSection
+EndGlobal

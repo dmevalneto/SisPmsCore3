@@ -1,0 +1,8 @@
+﻿<hr />
+<center>
+    <button type="button" class="btn btn-primary btn-lg"><a style="color:white" href="~/Usuario/Login">Entar no Sistema</a></button>
+    <button type="button" class="btn btn-success btn-lg"><a style="color:white" href="~/Usuario/Registrar">Registrar</a></button>
+</center>
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor
+<h1>@HttpContextAccessor.HttpContext.Session.GetString("NomeUsuarioLogado")</h1>
