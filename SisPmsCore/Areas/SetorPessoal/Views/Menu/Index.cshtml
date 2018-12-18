@@ -4,20 +4,60 @@
     Layout = "~/Views/Shared/_LeyoutSP.cshtml";
 }
 <hr />
-<h2 class="text-primary">Setor Pessoal</h2>
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+</ul>
+<hr>
+
 <div class="container">
     <div class="row">
-        <div class="col">col</div>
-        <div class="col">col</div>
-        <div class="col">col</div>
-        <div class="col">col</div>
-    </div>
-    <div class="row">
-        <div class="col">col</div>
-        <div class="col">col</div>
-        <div class="col">col</div>
-        <div class="col">col</div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Gestão de Colaboradores
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Gestão de colaboradores</h5>
+                    <p class="card-text">Sistema de gestão de colaboradors</p>
+                    <a class="btn btn-primary" asp-controller="Menu" asp-action="Index" asp-area="SetorPessoal"><span class="glyphicon glyphicon-user"></span>  Acessar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Gestão de Colaboradores
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Gestão de colaboradores</h5>
+                    <p class="card-text">Sistema de gestão de colaboradors</p>
+                    <a class="btn btn-primary" asp-controller="Menu" asp-action="Index" asp-area="SetorPessoal"><span class="glyphicon glyphicon-edit"></span>  Acessar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Gestão de Colaboradores
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Gestão de colaboradores</h5>
+                    <p class="card-text">Sistema de gestão de colaboradors</p>
+                    <a class="btn btn-primary" asp-controller="Menu" asp-action="Index" asp-area="SetorPessoal"><span class="glyphicon glyphicon-briefcase"></span>  Acessar</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 
