@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SisPmsCore.Models.Cargo>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LeyoutAdmin.cshtml";
+}
+
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idCargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in (List<Cargo>)ViewBag.ListaCargo)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idCargo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" }) |
+                    @Html.ActionLink("Detalhes", "Details", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" }) |
+                    @Html.ActionLink("Deletar", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<button class="btn btn-block btn-primary" onclick="NovoRegistro()">Novo Registro</button>
+
+<script>
+    function NovoRegistro() {
+        window.location.href = "../Cargo/NovoRegistro";
+    }
+</script>

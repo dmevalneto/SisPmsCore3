@@ -10,7 +10,7 @@ namespace SisPmsCore.Util
     public class DAL
     {
         private static string server = "localhost";
-        private static string database = "sispmscorebd";
+        private static string database = "sispmscore";
         private static string user = "root";
         private static string password = "";
 

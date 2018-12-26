@@ -1,0 +1,102 @@
+﻿@model IEnumerable<SisPmsCore.Models.PrestadoraServico>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LeyoutAdmin.cshtml";
+}
+
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idPrestadoraServico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RazaoSocial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cnpj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefone2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bairro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pais)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in (List<PrestadoraServico>) ViewBag.ListaPrestadoraServico)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idPrestadoraServico)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RazaoSocial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cnpj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cep)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Endereco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bairro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pais)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" }) |
+                    @Html.ActionLink("Detalhes", "Details", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" }) |
+                    @Html.ActionLink("Deletar", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button class="btn btn-block btn-primary" onclick="NovoRegistro()">Novo Registro</button>
+
+<script>
+    function NovoRegistro() {
+        window.location.href = "../PrestadoraServico/NovoRegistro";
+    }
+</script>
+

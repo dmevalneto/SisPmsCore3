@@ -1,0 +1,88 @@
+﻿@model IEnumerable<SisPmsCore.Models.Colaborador>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LeyoutAdmin.cshtml";
+}
+<br />
+<button class="btn btn-block btn-primary" onclick="NovoRegistro()">Novo Registro</button>
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+            @Html.DisplayNameFor(model => model.idColaborador)
+        </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataAdmissao)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.setor_idsetor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cargo_idcargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ocorrencia_idocorrencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prestadora_servico_idprestadora_servico)
+        </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in (List<Colaborador>) ViewBag.ListaColaborador)
+        {
+        <tr>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.idColaborador)
+        </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataAdmissao)
+            </td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.Telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.setor_idsetor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cargo_idcargo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ocorrencia_idocorrencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prestadora_servico_idprestadora_servico)
+        </td>*@
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" }) |
+                @Html.ActionLink("Detalhes", "Details", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" }) |
+                @Html.ActionLink("Deletar", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+<script>
+    function NovoRegistro() {
+        window.location.href = "../Colaborador/NovoRegistro";
+    }
+</script>

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<SisPmsCore.Models.Ocorrencia>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LeyoutAdmin.cshtml";
+}
+
+<br />
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idOcorrencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in (List<Ocorrencia>)ViewBag.ListaOcorrencia)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idOcorrencia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" }) |
+                    @Html.ActionLink("Detalhes", "Details", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" }) |
+                    @Html.ActionLink("Deletar", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-secondary" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button class="btn btn-block btn-primary" onclick="NovoRegistro()">Novo Registro</button>
+
+<script>
+    function NovoRegistro() {
+        window.location.href = "../Ocorrencia/NovoRegistro";
+    }
+</script>

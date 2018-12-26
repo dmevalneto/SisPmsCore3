@@ -84,6 +84,9 @@
                 divNome.innerHTML = "Olá " + nome + " <a href='../Usuario/Login/0'>(Sair)</a>";
                 divNome.style = "color:black; text-align: right; height:50px; padding-top:13px;"
             }
+            else {
+                window.location = "../Usuario/Login"
+            }
         }
     </script>
     @RenderSection("Scripts", required: false)
